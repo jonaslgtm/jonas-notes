@@ -7,7 +7,7 @@ on:
     types: [build-and-deploy]
   push:
     branches:
-      - master
+      - main
     # 只在下列路径变更时触发
     paths:
       - 'docs/**'
