@@ -52,8 +52,8 @@ jobs:
           APP_BASE_PATH: /jonaslgtm/jonas-notes
         run: pnpm install && pnpm run build
 
-      - name: Copy files
-        run: cp README.md ./dist/
+      # - name: Copy files
+      #   run: cp README.md ./dist/
 
       # 部署
       - name: Deploy
