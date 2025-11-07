@@ -1,5 +1,6 @@
 ---
-description: 茂茂：吾志所向，一往无前。一个想躺平的小开发
+title: Jonas
+description: 吾志所向，一往无前。一个想躺平的小开发
 layoutClass: m-mao-layout
 aside: false
 ---
@@ -11,7 +12,7 @@ aside: false
 }
 </style>
 
-# 茂茂 <Badge text="maoamo" /> <Badge text="maoamo1996" />
+# 浮舱笔记 <Badge text="Jonas" />
 
 ```sh:no-line-numbers
 吾志所向，一往无前。

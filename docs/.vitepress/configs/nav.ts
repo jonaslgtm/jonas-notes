@@ -104,7 +104,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '^/efficiency'
   },
   {
-    text: '茂茂',
-    link: '/mao'
+    text: 'About Me',
+    link: '/about'
   }
 ]
