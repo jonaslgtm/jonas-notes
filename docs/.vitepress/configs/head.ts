@@ -12,16 +12,16 @@ export const head: HeadConfig[] = [
   ['link', { rel: 'apple-touch-icon', href: '/favicon.ico' }],
   ['link', { rel: 'mask-icon', href: '/favicon.ico', color: '#3eaf7c' }],
   ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
-  [
-    'script',
-    { src: isDevelopment ? '' : 'https://hm.baidu.com/hm.js?8092fab2f2adfc7938ba5b8885aef5b4' },
-  ],
-  [
-    'script',
-    {
-      src: 'https://static.cloudflareinsights.com/beacon.min.js',
-      'data-cf-beacon': '{"token": "6139cc3e4505493c80ad1dabd0ad8c61"}',
-      defer: '',
-    },
-  ],
+  // [
+  //   'script',
+  //   { src: isDevelopment ? '' : 'https://hm.baidu.com/hm.js?8092fab2f2adfc7938ba5b8885aef5b4' },
+  // ],
+  // [
+  //   'script',
+  //   {
+  //     src: 'https://static.cloudflareinsights.com/beacon.min.js',
+  //     'data-cf-beacon': '{"token": "6139cc3e4505493c80ad1dabd0ad8c61"}',
+  //     defer: '',
+  //   },
+  // ],
 ]

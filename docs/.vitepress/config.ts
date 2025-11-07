@@ -86,9 +86,9 @@ export default defineConfig({
   },
 
   /* 生成站点地图 */
-  sitemap: {
-    hostname: 'https://notes.fe-mm.com/',
-  },
+  // sitemap: {
+  //   hostname: 'https://notes.fe-mm.com/',
+  // },
 
   vite: {
     plugins: [MarkdownPreview(), La51Plugin({ id: '3LNfUkScYzEz6k4D', ck: '3LNfUkScYzEz6k4D' })],
