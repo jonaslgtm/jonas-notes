@@ -20,18 +20,17 @@ const isDocFooterVisible = computed(() => {
 <template>
   <div v-if="isDocFooterVisible" v-show="hasSidebar" class="m-doc-footer">
     <div class="m-doc-footer-message">
-      <img
+      <p v-if="theme.footer?.message">{{ theme.footer.message }}</p>
+    </div>
+    <p class="m-doc-footer-copyright" v-if="theme.footer?.copyright">
+      {{ theme.footer.copyright }}
+    </p>      <!-- <img
         v-if="!DEV"
         class="visitor"
         :src="`https://visitor-badge.laobi.icu/badge?page_id=${visitor.badgeId}.${pageId}`"
         title="当前页面累计访问数"
         onerror="this.style.display='none'"
-      />
-      <p v-if="theme.footer?.message">{{ theme.footer.message }}</p>
-    </div>
-    <p class="m-doc-footer-copyright" v-if="theme.footer?.copyright">
-      {{ theme.footer.copyright }}
-    </p>
+      /> -->
   </div>
 </template>
 
