@@ -1,6 +1,5 @@
 import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
-import { La51Plugin } from 'vitepress-plugin-51la'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 import { head, nav, sidebar, algolia } from './configs'
@@ -90,14 +89,14 @@ export default defineConfig({
   //   hostname: 'https://notes.fe-mm.com/',
   // },
 
-  // vite: {
-  //   plugins: [MarkdownPreview(), La51Plugin({ id: '3LNfUkScYzEz6k4D', ck: '3LNfUkScYzEz6k4D' })],
-  //   css: {
-  //     preprocessorOptions: {
-  //       scss: {
-  //         api: 'modern-compiler',
-  //       },
-  //     },
-  //   },
-  // },
+  vite: {
+    plugins: [MarkdownPreview()],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
+  },
 })

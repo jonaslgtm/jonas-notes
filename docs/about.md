@@ -16,7 +16,7 @@ aside: false
 
 ```sh:no-line-numbers
 吾志所向，一往无前。
-                                -- 一个想躺平的小开发
+                  -- 一个想躺平的小开发
 ```
 
 **About:**
