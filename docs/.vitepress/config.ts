@@ -77,12 +77,11 @@ export default defineConfig({
       badgeId: 'jonaslgtm.notes',
     },
 
-    comment: {
-      repo: 'jonaslgtm/mm-notes',
-      repoId: 'MDEwOlJlcG9zaXRvcnkxNTc0ODc5Mjg=',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOCWMTOM4CZ2rf',
-    },
+    // comment: {
+    //   repoId: 'MDEwOlJlcG9zaXRvcnkxNTc0ODc5Mjg=',
+    //   category: 'Announcements',
+    //   categoryId: 'DIC_kwDOCWMTOM4CZ2rf',
+    // },
   },
 
   /* 生成站点地图 */
@@ -90,14 +89,14 @@ export default defineConfig({
   //   hostname: 'https://notes.fe-mm.com/',
   // },
 
-  vite: {
-    plugins: [MarkdownPreview(), La51Plugin({ id: '3LNfUkScYzEz6k4D', ck: '3LNfUkScYzEz6k4D' })],
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler',
-        },
-      },
-    },
-  },
+  // vite: {
+  //   plugins: [MarkdownPreview(), La51Plugin({ id: '3LNfUkScYzEz6k4D', ck: '3LNfUkScYzEz6k4D' })],
+  //   css: {
+  //     preprocessorOptions: {
+  //       scss: {
+  //         api: 'modern-compiler',
+  //       },
+  //     },
+  //   },
+  // },
 })
