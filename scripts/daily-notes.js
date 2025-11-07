@@ -1,7 +1,7 @@
 import fs from 'fs-extra'
 import { Octokit } from '@octokit/rest'
 
-const owner = 'maomao1996'
+const owner = 'jonaslgtm'
 const repo = 'daily-notes'
 
 const octokit = new Octokit()
@@ -19,11 +19,11 @@ function generateIssueMarkdown(issue) {
   :::tip 原文地址
   [${issue.title} | GitHub](${issue.html_url})
   :::
-  `
+  `,
   )
 
   fs.writeFile(`./docs/${repo}/issue-${issue.number}.md`, content, 'utf8').then(() =>
-    console.log(`Issue ${issue.number} generated successfully!`)
+    console.log(`Issue ${issue.number} generated successfully!`),
   )
 }
 
@@ -38,7 +38,7 @@ function generateIndexFile(data) {
 
 共计 **${issueYearGroups.reduce(
     (total, [, issues]) => total + issues.length,
-    0
+    0,
   )}** 篇（上次更新: ${formatTime(issueYearGroups[0][1][0].created_at)}）
 
 ${issueYearGroups
@@ -50,15 +50,15 @@ ${issues
     (issue, index) =>
       `${index + 1}. ${formatTime(issue.created_at)} —— [${
         issue.title
-      }](${`/daily-notes/issue-${issue.number}`})`
+      }](${`/daily-notes/issue-${issue.number}`})`,
   )
-  .join('\n\n')}`
+  .join('\n\n')}`,
   )
   .join('\n\n')}
 `
 
   fs.writeFile('./docs/daily-notes/index.md', content, 'utf8').then(() =>
-    console.log('Index file generated successfully!')
+    console.log('Index file generated successfully!'),
   )
 
   const jsonContent = issueYearGroups.map(([year, issues]) => ({
@@ -66,13 +66,13 @@ ${issues
     collapsed: false,
     items: issues.map((issue) => ({
       text: issue.title,
-      link: `/daily-notes/issue-${issue.number}`
-    }))
+      link: `/daily-notes/issue-${issue.number}`,
+    })),
   }))
 
   fs.writeJSON('./scripts/daily-notes.json', jsonContent, {
     spaces: 2,
-    encoding: 'utf8'
+    encoding: 'utf8',
   }).then(() => console.log('Json file generated successfully!'))
 }
 
@@ -83,7 +83,7 @@ try {
     repo,
     sort: 'created',
     state: 'all',
-    per_page: 100
+    per_page: 100,
   })
 
   fs.emptyDirSync('./docs/daily-notes')
