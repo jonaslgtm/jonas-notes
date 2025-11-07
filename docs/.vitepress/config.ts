@@ -78,6 +78,7 @@ export default defineConfig({
     },
 
     // comment: {
+    //   repo: 'jonaslgtm/mm-notes',
     //   repoId: 'MDEwOlJlcG9zaXRvcnkxNTc0ODc5Mjg=',
     //   category: 'Announcements',
     //   categoryId: 'DIC_kwDOCWMTOM4CZ2rf',
