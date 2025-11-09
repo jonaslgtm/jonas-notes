@@ -139,3 +139,10 @@ table {
 .dark::view-transition-old(root) {
   z-index: 9999;
 }
+// 侧边栏文字溢出处理
+.VPSidebarItem .item .VPLink p {
+  max-width: 207px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

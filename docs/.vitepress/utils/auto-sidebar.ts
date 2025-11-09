@@ -1,0 +1,200 @@
+// .vitepress/utils/auto-sidebar.ts 笔记侧边栏自动生成
+import { readdirSync, statSync, existsSync, readFileSync } from 'fs'
+import { join } from 'path'
+import matter from 'gray-matter'
+
+interface SidebarItem {
+  text: string
+  link?: string
+  collapsed?: boolean
+  items?: SidebarItem[]
+  date?: Date
+}
+
+// 缓存机制
+const fileCache = new Map<string, { title: string; date: Date; mtime: Date }>()
+
+function getMarkdownInfo(filePath: string): { title: string; date: Date } {
+  try {
+    // 检查缓存
+    const stats = statSync(filePath)
+    const cached = fileCache.get(filePath)
+
+    if (cached && cached.mtime.getTime() === stats.mtime.getTime()) {
+      return { title: cached.title, date: cached.date }
+    }
+
+    let title = '' // 不再使用文件名生成标题
+    let date = new Date() // 默认日期为当前日期
+
+    const fileContent = readFileSync(filePath, 'utf-8')
+    const { data: frontMatter } = matter(fileContent)
+
+    // 必须使用 front matter 中的 title
+    if (frontMatter.title) {
+      title = frontMatter.title
+    } else {
+      // 如果没有 title，使用文件名作为后备
+      const filename = filePath.split('/').pop() || ''
+      title = filename.replace('.md', '')
+    }
+
+    // 使用 front matter 中的 date
+    if (frontMatter.date) {
+      const parsedDate = new Date(frontMatter.date)
+      if (!isNaN(parsedDate.getTime())) {
+        date = parsedDate
+      }
+    }
+
+    // 更新缓存
+    fileCache.set(filePath, { title, date, mtime: stats.mtime })
+
+    return { title, date }
+  } catch (error) {
+    console.error(`读取文件信息失败: ${filePath}`, error)
+    // 出错时使用文件名作为标题
+    const filename = filePath.split('/').pop() || ''
+    return {
+      title: filename.replace('.md', ''),
+      date: new Date()
+    }
+  }
+}
+
+function generateDailyNotesSidebar(): SidebarItem[] {
+  const basePath = join(process.cwd(), 'docs/daily-notes')
+
+  if (!existsSync(basePath)) {
+    console.warn('daily-notes 目录不存在:', basePath)
+    return []
+  }
+
+  // 获取所有年份目录
+  const years = readdirSync(basePath)
+    .filter(entry => {
+      const fullPath = join(basePath, entry)
+      try {
+        return statSync(fullPath).isDirectory() && /^\d{4}$/.test(entry)
+      } catch {
+        return false
+      }
+    })
+    .sort((a, b) => b.localeCompare(a)) // 年份倒序
+
+  const sidebarItems: SidebarItem[] = []
+
+  for (const year of years) {
+    const yearPath = join(basePath, year)
+    let files: string[] = []
+
+    try {
+      files = readdirSync(yearPath)
+        .filter(file => file.endsWith('.md') && file !== 'index.md')
+    } catch (error) {
+      console.error(`无法读取年份目录: ${yearPath}`, error)
+      continue
+    }
+
+    // 处理该年份下的所有文件
+    const yearItems = files
+      .map(file => {
+        const filePath = join(yearPath, file)
+
+        try {
+          const { title, date } = getMarkdownInfo(filePath)
+          return {
+            text: title,
+            link: `/daily-notes/${year}/${file.replace('.md', '')}`,
+            date
+          }
+        } catch (error) {
+          console.error(`处理文件失败: ${filePath}`, error)
+          return null
+        }
+      })
+      .filter((item): item is NonNullable<typeof item> => item !== null)
+      .sort((a, b) => b.date.getTime() - a.date.getTime()) // 按日期倒序
+
+    // 处理年份索引文件
+    const yearIndexPath = join(yearPath, 'index.md')
+    let yearTitle = `${year} 年`
+    let yearDate = new Date(parseInt(year), 0, 1)
+
+    if (existsSync(yearIndexPath)) {
+      try {
+        const { title, date } = getMarkdownInfo(yearIndexPath)
+        yearTitle = title
+        yearDate = date
+      } catch (error) {
+        console.error(`处理年份索引失败: ${yearIndexPath}`, error)
+      }
+    }
+
+    sidebarItems.push({
+      text: yearTitle,
+      collapsed: false,
+      items: yearItems,
+      date: yearDate
+    })
+  }
+
+  // 按日期倒序排列所有年份（最新的在最上面）
+  sidebarItems.sort((a, b) => {
+    const dateA = a.date || new Date(0)
+    const dateB = b.date || new Date(0)
+    return dateB.getTime() - dateA.getTime()
+  })
+
+  // 处理根目录下的文件（不在任何年份目录中）- 放在最下面
+  const rootFiles = readdirSync(basePath)
+    .filter(file => {
+      const fullPath = join(basePath, file)
+      return statSync(fullPath).isFile() && file.endsWith('.md') && file !== 'index.md'
+    })
+    .map(file => {
+      const filePath = join(basePath, file)
+
+      try {
+        const { title, date } = getMarkdownInfo(filePath)
+        return {
+          text: title,
+          link: `/daily-notes/${file.replace('.md', '')}`,
+          date
+        }
+      } catch (error) {
+        console.error(`处理根目录文件失败: ${filePath}`, error)
+        return null
+      }
+    })
+    .filter((item): item is NonNullable<typeof item> => item !== null)
+    .sort((a, b) => b.date.getTime() - a.date.getTime())
+
+  // 如果有根目录文件，添加到侧边栏底部
+  if (rootFiles.length > 0) {
+    sidebarItems.push({
+      text: '其他笔记',
+      collapsed: false,
+      items: rootFiles,
+      date: rootFiles[0]?.date || new Date()
+    })
+  }
+
+  return sidebarItems
+}
+
+export function autoGenerateDailyNotes(): SidebarItem[] {
+  try {
+    const items = generateDailyNotesSidebar()
+    console.log('自动生成的 daily-notes 侧边栏:', items)
+    return items
+  } catch (error) {
+    console.error('生成 daily-notes 侧边栏时出错:', error)
+    return []
+  }
+}
+
+// 清理缓存的方法
+export function clearSidebarCache(): void {
+  fileCache.clear()
+}
