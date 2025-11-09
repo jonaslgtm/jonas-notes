@@ -12,9 +12,8 @@
   "bugs": {
     "url": "https://github.com/jonaslgtm/jonas-notes/issues"
   },
-  "license": "MIT",
-  "homepage": "https://github.com/jonaslgtm/jonas-notes#readme",
   "author": "jonas <10245089@qq.com>",
+
   "scripts": {
     "dev": "cross-env NODE_ENV=development pnpm run generate-index && vitepress dev docs --port=8732",
     "build": "pnpm run generate-index && vitepress build docs",
@@ -24,6 +23,7 @@
     "prepare": "husky install",
     "generate-index": "tsx docs/.vitepress/utils/generate-index.ts"
   },
+
   "devDependencies": {
     "@femm/prettier": "^1.1.0",
     "@femm/tailwind-config": "^1.0.0",

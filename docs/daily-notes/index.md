@@ -6,12 +6,10 @@ title: Daily Notes 日常笔记
 
 日常笔记记录（零零散散啥都记系列）
 
-共计 8 篇（上次更新: 2025-11-09）
+共计 7 篇（上次更新: 2025-11-09）
 
 
-## 2025 年 (共计 6 篇)
-
-2025-11-09 —— [自动生成？](/daily-notes/2025/gg-test)
+## 2025 年 (共计 5 篇)
 
 2025-11-06 —— [GitHub Pages 部署 Vitepress 时常见问题](/daily-notes/2025/vitepress-github-pages)
 
