@@ -78,28 +78,6 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.ruanyifeng.com/blog/archives.html'
       },
       {
-        badge: '周五更新',
-        icon: 'https://s0.ssl.qhres2.com/static/3444fd94a3c31e92.ico',
-        title: '奇舞周刊',
-        desc: '领略前端技术 阅读奇舞周刊（360 前端团队）',
-        link: 'https://weekly.75.team'
-      },
-      {
-        badge: '周一更新',
-        icon: 'https://img.alicdn.com/imgextra/i3/O1CN01uKTVpD1UK8BCxFBwo_!!6000000002498-2-tps-500-500.png',
-        title: 'MDH Weekly',
-        desc: '云谦的前端周刊',
-        link: 'https://mdhweekly.com/weekly'
-      },
-      {
-        badge: '每周更新',
-        icon: '/icons/geekhyt-weekly.png',
-        title: '前端食堂技术周刊',
-        desc: '周周尝鲜，人工筛选前端圈每周最新资讯',
-        link: 'https://hungryturbo.zhubai.love'
-        // link: 'https://github.com/Geekhyt/weekly'
-      },
-      {
         icon: 'https://overreacted.io/icons/icon-96x96.png?v=8c19a894ebc3f54d282a8f2418cf5398',
         title: 'Overreacted',
         desc: 'Dan Abramov 的个人博客',
@@ -138,7 +116,37 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: 'AI 导航',
+    title: '前端学习资料',
+    items: [
+      {
+        icon: 'https://developer.mozilla.org/apple-touch-icon.6803c6f0.png',
+        title: 'MDN | Web 开发者指南',
+        desc: 'Mozilla 的开发者平台，提供了大量关于 HTML、CSS 和 JavaScript 的详细文档以及广泛的 Web API 参考资',
+        link: 'https://developer.mozilla.org/zh-CN'
+      },
+      {
+        icon: 'https://static.runoob.com/images/favicon.ico',
+        title: '菜鸟教程',
+        desc: '学的不仅是技术，更是梦想！',
+        link: 'https://www.runoob.com'
+      },
+      {
+        icon: '/icons/es6.svg',
+        title: 'ES6 入门教程',
+        desc: '阮一峰的网络日志',
+        link: 'http://es6.ruanyifeng.com'
+      },
+      {
+        badge: '官网',
+        icon: 'https://www.typescriptlang.org/icons/icon-72x72.png?v=8944a05a8b601855de116c8a56d3b3ae',
+        title: 'TypeScript',
+        desc: 'TypeScript 是具有类型语法的 JavaScript',
+        link: 'https://www.typescriptlang.org/zh/'
+      }
+    ]
+  },
+  {
+    title: 'AI 工具',
     items: [
       {
         badge: '对话',
@@ -168,35 +176,6 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://stablediffusionweb.com/favicon.ico',
         title: 'Stable Diffusion',
         link: 'https://stablediffusionweb.com'
-      }
-    ]
-  },
-  {
-    title: '茂茂的站点导航',
-    items: [
-      {
-        icon: '/logo.png',
-        title: '前端日常笔记',
-        desc: '日常笔记记录（零零散散啥都记系列）',
-        link: 'https://github.com/maomao1996/daily-notes'
-      },
-      {
-        icon: '/logo.png',
-        title: '前端思维导图',
-        desc: '用思维导图的方式总结个人所学知识',
-        link: 'https://mindmap.fe-mm.com'
-      },
-      {
-        icon: 'https://qwerty.fe-mm.com/apple-touch-icon.png',
-        title: 'Qwerty Learner',
-        desc: '为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件',
-        link: 'https://qwerty.fe-mm.com'
-      },
-      {
-        icon: '/logo.png',
-        title: 'mmPlayer',
-        desc: 'mmPlayer 在线音乐播放器',
-        link: 'https://netease-music.fe-mm.com'
       }
     ]
   },
@@ -297,12 +276,6 @@ export const NAV_DATA: NavData[] = [
         title: 'Vue 3',
         desc: '渐进式 JavaScript 框架',
         link: 'https://cn.vuejs.org'
-      },
-      {
-        icon: 'https://cn.vuejs.org/logo.svg',
-        title: 'Vue 2',
-        desc: '渐进式 JavaScript 框架',
-        link: 'https://v2.cn.vuejs.org'
       },
       {
         icon: 'https://cn.vuejs.org/logo.svg',
@@ -421,23 +394,6 @@ export const NAV_DATA: NavData[] = [
         title: 'CSS 常见布局',
         desc: 'CSS 各种常见的布局实现',
         link: 'https://sweet-kk.github.io/css-layout/'
-      }
-    ]
-  },
-  {
-    title: '小程序相关',
-    items: [
-      {
-        icon: 'https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png',
-        title: '微信小程序文档',
-        desc: '微信小程序官方开发者文档',
-        link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/'
-      },
-      {
-        icon: '/icons/alipay.svg',
-        title: '支付宝小程序文档',
-        desc: '支付宝小程序官方开发者文档',
-        link: 'https://opendoc.alipay.com/mini/'
       }
     ]
   },
@@ -615,66 +571,7 @@ export const NAV_DATA: NavData[] = [
         desc: '一个开源的图标集合和图标工具',
         link: 'https://iconify.design'
       },
-      {
-        icon: 'https://icones.js.org/favicon.svg',
-        title: 'Icônes',
-        desc: '基于 Iconify 的图标浏览器',
-        link: 'https://icones.js.org'
-      },
-      {
-        icon: '/icons/simpleicons.svg',
-        title: 'Simple Icons',
-        desc: '包含 2457 种流行品牌的免费 SVG 图标库',
-        link: 'https://simpleicons.org'
-      },
-      {
-        icon: 'https://emoji.muan.co/appicon.png',
-        title: 'Emoji searcher',
-        desc: 'emoji 表情大全',
-        link: 'https://emoji.muan.co'
-      },
-      {
-        icon: 'https://www.webfx.com/wp-content/uploads/2021/10/favicon.png',
-        title: 'Emoji Cheat Sheet',
-        desc: '可以在 GitHub 中使用的 emoji 表情',
-        link: 'https://www.webfx.com/tools/emoji-cheat-sheet'
-      },
-      {
-        icon: 'https://gitmoji.dev/static/apple-icon-144x144.png',
-        title: 'gitmoji',
-        desc: '可以在 git 中使用的 emoji 表情',
-        link: 'https://gitmoji.dev'
-      }
-    ]
-  },
-  {
-    title: '前端学习资料',
-    items: [
-      {
-        icon: 'https://developer.mozilla.org/apple-touch-icon.6803c6f0.png',
-        title: 'MDN | Web 开发者指南',
-        desc: 'Mozilla 的开发者平台，提供了大量关于 HTML、CSS 和 JavaScript 的详细文档以及广泛的 Web API 参考资',
-        link: 'https://developer.mozilla.org/zh-CN'
-      },
-      {
-        icon: 'https://static.runoob.com/images/favicon.ico',
-        title: '菜鸟教程',
-        desc: '学的不仅是技术，更是梦想！',
-        link: 'https://www.runoob.com'
-      },
-      {
-        icon: '/icons/es6.svg',
-        title: 'ES6 入门教程',
-        desc: '阮一峰的网络日志',
-        link: 'http://es6.ruanyifeng.com'
-      },
-      {
-        badge: '官网',
-        icon: 'https://www.typescriptlang.org/icons/icon-72x72.png?v=8944a05a8b601855de116c8a56d3b3ae',
-        title: 'TypeScript',
-        desc: 'TypeScript 是具有类型语法的 JavaScript',
-        link: 'https://www.typescriptlang.org/zh/'
-      }
+
     ]
   },
   {
@@ -691,8 +588,20 @@ export const NAV_DATA: NavData[] = [
       {
         title: '知乎',
         icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
-        desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
+        desc: '中文互联网高质量的问答社区',
         link: 'https://www.zhihu.com/'
+      },
+      {
+        icon: 'https://www.xiaohongshu.com/favicon.ico',
+        title: '小红书',
+        desc: '全球最大的生活方式分享平台',
+        link: 'https://www.xiaohongshu.com'
+      },
+      {
+        icon: 'https://www.smzdm.com/favicon.ico',
+        title: '什么值得买',
+        desc: '发现值得买的好东西',
+        link: 'https://www.smzdm.com/'
       },
       {
         icon: 'https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a',
@@ -711,36 +620,23 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://www.v2ex.com/static/icon-192.png',
         desc: '一个关于分享和探索的地方',
         link: 'https://www.v2ex.com'
-      },
-      {
-        title: 'SegmentFault 思否',
-        icon: 'https://static.segmentfault.com/main_site_next/0dc4bace/touch-icon.png',
-        desc: '技术问答开发者社区',
-        link: 'https://segmentfault.com'
-      },
-      {
-        title: '博客园',
-        // icon: 'https://common.cnblogs.com/favicon.ico',
-        icon: '/icons/cnblogs.svg',
-        desc: '博客园是一个面向开发者的知识分享社区',
-        link: 'https://www.cnblogs.com'
-      },
+      }
     ]
   },
   {
     title: '摸鱼专用',
     items: [
       {
-        icon: 'https://momoyu.cc/icon-192.png',
-        title: '摸摸鱼热榜',
-        // desc: '聚合每日热门、搞笑、有趣、适合摸鱼的资讯',
-        link: 'https://momoyu.cc'
+        icon: 'https://weibo.com/favicon.ico',
+        title: '微博',
+        // desc: '全球最大的中文社交媒体平台',
+        link: 'https://weibo.com/'
       },
       {
-        icon: 'https://v.qq.com/favicon.ico',
-        title: '腾讯视频',
-        // desc: '中国领先的在线视频媒体平台，海量高清视频在线观看',
-        link: 'https://v.qq.com'
+        icon: 'https://www.douyin.com/favicon.ico',
+        title: '抖音',
+        // desc: '全球最大的短视频平台',
+        link: 'https://www.douyin.com/'
       },
       {
         icon: 'https://static.hdslb.com/mobile/img/512.png',
@@ -749,23 +645,44 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.bilibili.com'
       },
       {
-        icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
+        icon: '/icons/instagram.svg',
+        title: 'Instagram',
+        // desc: 'ins，全球最大的图片社交平台',
+        link: 'https://www.instagram.com/'
+      },
+      {
+        icon: '/icons/youtube.svg',
         title: 'YouTube',
         // desc: '',
         link: 'https://www.youtube.com'
       },
       {
-        icon: '/icons/twitter.svg',
-        title: 'Twitter',
+        icon: '/icons/x.svg',
+        title: 'X（前 Twitter）',
         // desc: '',
-        link: 'https://twitter.com'
+        link: 'https://www.x.com'
+      }
+    ]
+  },
+  {
+    title: 'CPS 联盟',
+    items: [
+      {
+        icon: "/icons/jd.svg",
+        title: '京东联盟',
+        link: 'https://union.jd.com/',
       },
       {
-        icon: '/icons/pixiv.png',
-        title: 'Pixiv',
-        // desc: '',
-        link: 'https://www.pixiv.net'
-      }
+        icon: 'https://www.taobao.com/favicon.ico',
+        title: '淘宝联盟',
+        link: 'https://pub.alimama.com/',
+      },
+      {
+        icon: 'https://pinduoduo.com/favicon.png',
+        title: '多多进宝',
+        link: 'https://jinbao.pinduoduo.com/',
+        badge: '拼多多'
+      },
     ]
   }
 ]

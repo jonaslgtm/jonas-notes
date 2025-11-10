@@ -5,7 +5,7 @@ layoutClass: 'm-home-layout'
 hero:
   name: 浮舱笔记
   text: Jonas 的成长之路
-  tagline: 知识是进步的阶梯，争取每天都有知识点更新
+  tagline: 好记性不如烂键盘 Notes to Self.
   image:
     src: /logo.webp
     alt: 浮舱笔记
