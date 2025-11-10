@@ -122,7 +122,7 @@ title: Daily Notes 日常笔记
 
 日常笔记记录（零零散散啥都记系列）
 
-共计 ${totalCount} 篇（上次更新: ${lastUpdate}）
+共计 **${totalCount}** 篇（上次更新: ${lastUpdate}）
 
 `
 
