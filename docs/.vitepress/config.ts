@@ -8,7 +8,9 @@ const APP_BASE_PATH = basename(process.env.APP_BASE_PATH || '')
 
 export default defineConfig({
   outDir: '../dist',
-  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  // base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  // 直接写死为
+  base: '/jonas-notes/',
 
   lang: 'zh-CN',
   title: '浮舱笔记',
@@ -42,7 +44,7 @@ export default defineConfig({
       label: '页面导航',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/Jonaslgtm' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jonaslgtm' }],
 
     footer: {
       // message: '如有转载或 CV 的请标注本站原文地址',
