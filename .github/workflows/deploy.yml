@@ -48,6 +48,8 @@ jobs:
 
       # 打包静态文件
       - name: Run Script
+        env:
+          APP_BASE_PATH: /jonas-notes # 修改这里，去掉重复的 jonaslgtm
         run: pnpm install && pnpm run build
 
       # - name: Copy files
