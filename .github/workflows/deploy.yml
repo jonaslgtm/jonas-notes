@@ -50,7 +50,7 @@ jobs:
       - name: Run Script
         env:
           APP_BASE_PATH: /jonas-notes # 开发环境变量，生产环境删除
-        run: pnpm install && pnpm run build
+        run: pnpm install && pnpm run build # build
 
       # - name: Copy files
       #   run: cp README.md ./dist/
