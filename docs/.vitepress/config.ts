@@ -8,9 +8,7 @@ const APP_BASE_PATH = basename(process.env.APP_BASE_PATH || '')
 
 export default defineConfig({
   outDir: '../dist',
-  // base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
-  // 直接写死为
-  base: '/jonas-notes/',
+  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
 
   lang: 'zh-CN',
   title: '浮舱笔记',
