@@ -10,10 +10,10 @@ hero:
     src: /logo.webp
     alt: 浮舱笔记
   actions:
-    - text: 前端物语
-      link: /fe/es6/
     - text: 前端导航
       link: /nav
+    - text: 前端物语
+      link: /fe/es6/
       theme: alt
     - text: 日常笔记
       link: /daily-notes/

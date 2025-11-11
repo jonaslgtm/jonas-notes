@@ -27,8 +27,8 @@ const items = ref<NavLink[]>(getItems())
 const handleClick = (data: NavLink) => {
   let newData = items.value.filter((item) => item.link !== data.link)
   newData.unshift(data)
-  if (newData.length > 4) {
-    newData = newData.slice(0, 4)
+  if (newData.length > 5) {
+    newData = newData.slice(0, 5)
   }
   localStorage.setItem(M_RECENT_LINKS_KEY, JSON.stringify(newData))
   items.value = newData

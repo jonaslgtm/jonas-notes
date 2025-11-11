@@ -2,7 +2,7 @@ import type { NavData } from '../.vitepress/theme/types'
 
 export const NAV_DATA: NavData[] = [
   {
-    title: '常用工具',
+    title: '常用',
     items: [
       {
         icon: 'https://caniuse.com/img/favicon-128.png',
@@ -61,7 +61,57 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '高质量周刊与博客',
+    title: '站长工具',
+    items: [
+      {
+        icon: 'https://csstools.chinaz.com/favicon.ico',
+        title: '站长之家',
+        desc: '专业的站长工具和互联网资讯平台',
+        link: 'https://tool.chinaz.com/',
+      },
+      {
+        badge: 'Free',
+        icon: '/icons/51la.ico',
+        title: '51LA',
+        desc: '国内领先的免费的流量统计技术服务提供商',
+        link: 'https://www.51.la/',
+      },
+      {
+        badge: '域名',
+        icon: "https://www.ename.com/favicon.ico",
+        title: '易名中国',
+        desc: '国内知名的域名服务机构',
+        link: 'https://www.ename.com/',
+      },
+      {
+        badge: '云服务',
+        icon: 'https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico',
+        title: '阿里云计算',
+        desc: '全球领先的云计算及人工智能科技公司',
+        link: 'https://www.aliyun.com/',
+      },
+      {
+        icon: 'https://www.bt.cn/favicon.ico',
+        title: '宝塔',
+        desc: '简单好用的Linux/Windows服务器运维管理面板',
+        link: 'https://www.bt.cn/',
+      },
+      {
+        icon: 'https://1panel.cn/favicon.png',
+        title: '1Panel',
+        desc: '现代化、开源的Linux服务器运维管理面板',
+        link: 'https://1panel.cn/',
+      },
+      {
+        icon: 'https://man.niaoge.com/public/img/favicon.ico',
+        title: '鸟哥Linux',
+        desc: '最专业的Linux命令大全，Linux常用命令行实例详解',
+        link: 'https://1panel.cn/',
+      },
+    ]
+  },
+  {
+    title: '前端学习资料',
     items: [
       {
         badge: '周一更新',
@@ -70,54 +120,6 @@ export const NAV_DATA: NavData[] = [
         desc: '前端周刊',
         link: 'https://frontender-ua.medium.com'
       },
-      {
-        badge: '周五更新',
-        icon: '/icons/ruanyifeng.jpeg',
-        title: '科技爱好者周刊',
-        desc: '阮一峰的科技爱好者周刊',
-        link: 'https://www.ruanyifeng.com/blog/archives.html'
-      },
-      {
-        icon: 'https://overreacted.io/icons/icon-96x96.png?v=8c19a894ebc3f54d282a8f2418cf5398',
-        title: 'Overreacted',
-        desc: 'Dan Abramov 的个人博客',
-        link: 'https://overreacted.io/zh-hans'
-      },
-      {
-        icon: 'https://xiaolincoding.com/logo.webp',
-        title: '小林coding',
-        desc: '小林 x 图解计算机基础（计算机网络、操作系统、计算机组成、数据库）',
-        link: 'https://xiaolincoding.com'
-      },
-      {
-        icon: 'https://antfu.me/favicon.svg',
-        title: 'Blog - Anthony Fu',
-        desc: 'Vue, Vite, Nuxt 核心团队成员 | VueUse, Slidev, Vitest, UnoCSS 作者',
-        link: 'https://antfu.me/posts'
-      },
-      {
-        icon: 'https://cdn.zhangxinxu.com/zxx_ico.png',
-        title: '鑫空间-鑫生活',
-        desc: '张鑫旭的个人博客',
-        link: 'https://www.zhangxinxu.com/wordpress'
-      },
-      {
-        icon: '/icons/ascoders.png',
-        title: '前端精读周刊',
-        desc: '帮你理解最前沿、实用的技术',
-        link: 'https://github.com/ascoders/weekly'
-      },
-      {
-        icon: '/icons/mqyqingfeng.jpeg',
-        title: '冴羽博客',
-        desc: '四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列',
-        link: 'https://github.com/mqyqingfeng/Blog'
-      }
-    ]
-  },
-  {
-    title: '前端学习资料',
-    items: [
       {
         icon: 'https://developer.mozilla.org/favicon.ico',
         title: 'MDN | Web 开发者指南',
@@ -142,6 +144,13 @@ export const NAV_DATA: NavData[] = [
         title: 'TypeScript',
         desc: 'TypeScript 是具有类型语法的 JavaScript',
         link: 'https://www.typescriptlang.org/zh/'
+      },
+      {
+        badge: 'mark',
+        icon: 'https://markdown.com.cn/favicon.ico',
+        title: 'Markdown',
+        desc: 'Markdown 教程',
+        link: 'https://markdown.com.cn/'
       }
     ]
   },
@@ -176,7 +185,42 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://stablediffusionweb.com/favicon.ico',
         title: 'Stable Diffusion',
         link: 'https://stablediffusionweb.com'
-      }
+      },
+    ]
+  },
+  {
+    title: '在线文档工具',
+    items: [
+      {
+        icon: 'https://shimo.im/favicon.ico',
+        title: '石墨文档',
+        desc: '在线协同办公系统平台,支持云端多人在线协作文档',
+        link: 'https://shimo.im/',
+      },
+      {
+        icon: 'https://docs.idqqimg.com/tim/docs/desktop/favicon.ico',
+        title: '腾讯文档',
+        desc: '腾讯旗下在线文档编辑与协作平台',
+        link: 'https://docs.qq.com/',
+      },
+      {
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAACH1BMVEUAAAA9kP8mpv9Fv/8QT94TXeQAfv8trP0xr/0VUdoAcv8LgPs1sf4AgP4QUuURTuEVl/ksq/wAg/84tf4NUt80sf0bnPsPUuAAYfsAgP4UTtYAY/8GXPQRkv1Jxv8AZP86tv9Bvv9Gv/9Atv8KiPUOVesAZ+wbS8wUl/kjo/sAYv8PVekjovxBu/8AY/8trPxCu/8AW/AAcvAxsP0npvsYTdElo/oQT9o+uP8AYv8KVOIHdugAYfwAfPwbfe49uf4XmfkcdOopo/oAYv86tf4AYf8TT9cZaeYVTdUJVOUcnvsAYv8Agv9Iwv8AYv9Jwf8bSs0gofoAY/8Ag/9Gv/8en/oAYf9Fv/8AWuQZS80AdO5BvP8AYv9DvP8Umfo9uv8LVOUAgf8amfk/uf8AY/8Ag/8Ahf8TUdgVT9UNWOknov8trPwxr/wmpvspqfs1sv0io/s5tf0AgP8bnfoMV+4AYPoAYv8AYf4AYfwAe/sen/oAd/gAXvYAff0LW/MLWfEOUN0PT9oSTtZAu/49uP0qqfweoPoXmvkAdPUAXPIAcfEKUuIWTNIXS88KXPYAWusOVeoPVOkPUuYQUeQQT+IMUeAUTdMZSs09uP4Aa+kAWOgAaeQIVOQIU+QAV+MRTd8STd0RTtgSl/kAW+8NWO8Abu0AbuwBZNsAg/8AYPwAc/MIVecAZuEAVeAAWt8AZN0JgvAIfOsJV+sTVuIAU9qil9AQAAAAa3RSTlMAAwb++A3+bkkkGxL8+Pf36tnTubCYjol4dmVjRjEvLysZFA7+/Pv6+fj39/b19fPw8O/u7Ovq6Ofn5+Xj4uDa2trZ1dPS0s/Ny7+9vLi4trapoqGgoJ2XkI+KgoJycGRhX1BNS0pHQj06IcCB3jkAAAIBSURBVDjLdZCHctpAFEWfCMU1ce8tTu+99957770nJFGwkE1sgyMTAginYbkAIQSD494+0G+ltTAacWZnNLt7dO/Og3Tqzl2og8wsvroAudEI+iy5s+6LzMZ7Bp1r5sFOQegRenAJwoEnoCXr6Mc0ihvSrhuK32vJK21Mva00760OWyz0KZYNbzJQmKXUF1o7rZ24rGngweETIGOwbH2nw/ZDUaM6grJVHzSs3R+NoqDy+lKLuwWX2618r03/QRalhNzbewo+qZyuZX4TVMFQubm3f3xy5VeZg49xsL8IC+mUH+1zeLyJ3pHkRCwWK7hvIGc/CYrwvIhtbXZ4hgYwJLm0LFf56QdhDRAq8wdZMypD3kT/SBJo6nfCMmWTc2WQlUO8GDIn2GSAUnuWGERJpIS4LR4HlWdFNITua9pl5s3h5vJ81tzscAAhuyTc3kZQ51CxqasvMmDGENyZyo1BX2iqLRAI0L7qvU2fv6Ex5mVbgana4XIGfb7QsI0KNcc4O4/Gv67I6Jjn5cmOvy4nGuFwaFipqFjN2YlBQkZn/N0dxAhiSfjUKzqHyxwq/0lIX0T0d6OAGb7dD0Gl/gzH8UqN6JcNp7HcBPN5esTO8U2oSCIpcZVkgwamepedxxpJROP4C9DBdHc9vlWSxG1VDOiTc53jpRW3TJCZ+vMXNeWzDz4DoNZyqecAAAAASUVORK5CYII=',
+        title: '金山文档',
+        desc: '金山旗下在线文档与协作平台，支持 WPS 云同步',
+        link: 'https://www.kdocs.cn/',
+      },
+      {
+        icon: 'https://www.feishu.cn/favicon.ico',
+        title: '飞书',
+        desc: '字节跳动旗下在线文档与协作平台',
+        link: 'https://www.feishu.cn/',
+      },
+      {
+        icon: 'https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*vMxOQIh4KBMAAAAAAAAAAAAADvuFAQ/original',
+        title: '语雀',
+        desc: '阿里巴巴旗下在线文档与知识管理平台',
+        link: 'https://www.yuque.com/',
+      },
     ]
   },
   {
@@ -334,28 +378,10 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: 'JavaScript 框架类库',
-    items: [
-      {
-        icon: 'https://svelte.dev/svelte-logo-horizontal.svg',
-        title: 'Svelte',
-        desc: '将声明性组件转换为精准高效更新 DOM 的 JavaScript 代码',
-        link: 'https://svelte.dev'
-      },
-      {
-        // icon: 'https://simpleicons.org/icons/jquery.svg',
-        icon: '/icons/jquery.svg',
-        title: 'jQuery API 中文文档',
-        desc: '一个兼容多浏览器的 JavaScript 框架',
-        link: 'https://jquery.cuishifeng.cn'
-      }
-    ]
-  },
-  {
     title: 'CSS 相关',
     items: [
       {
-        icon: 'https://postcss.org/assets/logo-3e39b0aa.svg',
+        icon: '/icons/postcss.svg',
         title: 'PostCSS',
         desc: '一个用 JavaScript 转换 CSS 的工具',
         link: 'https://postcss.org'
@@ -371,12 +397,6 @@ export const NAV_DATA: NavData[] = [
         title: 'TailwindCSS 中文网',
         desc: '一个功能类优先的 CSS 框架',
         link: 'https://www.tailwindcss.cn'
-      },
-      {
-        icon: 'https://unocss.dev/logo.svg',
-        title: 'UnoCSS',
-        desc: '一个即时的原子化 CSS 引擎',
-        link: 'https://unocss.dev'
       },
       {
         icon: '/icons/you-need-to-know-css.ico',
@@ -548,30 +568,6 @@ export const NAV_DATA: NavData[] = [
         desc: 'Rust-based platform for the Web',
         link: 'https://swc.rs'
       }
-    ]
-  },
-  {
-    title: '图标库',
-    items: [
-      {
-        icon: 'https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg',
-        title: 'iconfont',
-        desc: '国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能',
-        link: 'https://www.iconfont.cn'
-      },
-      {
-        icon: 'https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg',
-        title: 'IconPark 图标库',
-        desc: 'IconPark图标库是一个通过技术驱动矢量图标样式的开源图标库，可以实现根据单一 SVG 源文件变换出多种主题， 具备丰富的分类、更轻量的代码和更灵活的使用场景；致力于构建高质量、统一化、可定义的图标资源，让大多数人都能够选择适合自己的风格图标',
-        link: 'https://iconpark.oceanengine.com/official'
-      },
-      {
-        icon: '/icons/iconify.png',
-        title: 'Iconify',
-        desc: '一个开源的图标集合和图标工具',
-        link: 'https://iconify.design'
-      },
-
     ]
   },
   {
