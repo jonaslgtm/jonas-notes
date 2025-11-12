@@ -368,7 +368,7 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '在线文档',
+    title: '文档&笔记',
     items: [
       {
         icon: 'https://shimo.im/favicon.ico',
