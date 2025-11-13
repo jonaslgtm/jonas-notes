@@ -157,7 +157,7 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://man.niaoge.com/public/img/favicon.ico',
         title: '鸟哥Linux',
         desc: '最专业的Linux命令大全，Linux常用命令行实例详解',
-        link: 'https://1panel.cn/',
+        link: 'https://man.niaoge.com/',
       },
     ]
   },
