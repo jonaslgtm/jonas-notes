@@ -433,12 +433,6 @@ export const NAV_DATA: NavData[] = [
         desc: 'JetBrains 公司开发的一系列集成开发环境',
         link: 'https://www.jetbrains.com/ides/#choose-your-ide'
       },
-      {
-        badge: '绘画',
-        icon: 'https://stablediffusionweb.com/favicon.ico',
-        title: 'Stable Diffusion',
-        link: 'https://stablediffusionweb.com'
-      },
     ]
   },
   {
