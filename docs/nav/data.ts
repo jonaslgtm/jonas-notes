@@ -367,8 +367,34 @@ export const NAV_DATA: NavData[] = [
       }
     ]
   },
+{
+    title: '编辑器/IDE',
+    items: [
+      {
+        badge: '收费',
+        icon: 'https://www.sublimetext.com/favicon.ico',
+        title: 'Sublime Text',
+        desc:' 是一个文本编辑器，同时也是一个先进的代码编辑器',
+        link: 'https://www.sublimetext.com/'
+      },
+      {
+        badge:'开源',
+        icon: 'https://code.visualstudio.com/favicon.ico',
+        title: 'Visual Studio Code',
+        desc: '微软公司开发的跨平台开源代码编辑器',
+        link: 'https://code.visualstudio.com/'
+      },
+      {
+        badge: '开发者免费',
+        icon: 'https://www.jetbrains.com/favicon.ico',
+        title: 'JetBrains IDE',
+        desc: 'JetBrains 公司开发的一系列集成开发环境',
+        link: 'https://www.jetbrains.com/ides/#choose-your-ide'
+      },
+    ]
+  },
   {
-    title: '文档&笔记',
+    title: '笔记&在线文档',
     items: [
       {
         icon: 'https://shimo.im/favicon.ico',
@@ -406,32 +432,6 @@ export const NAV_DATA: NavData[] = [
         title: 'Notion AI',
         desc: '新一代笔记和文档，简约、强大、精美。',
         link: 'https://www.notion.so'
-      },
-    ]
-  },
-  {
-    title: '编辑器/IDE',
-    items: [
-      {
-        badge: '收费',
-        icon: 'https://www.sublimetext.com/favicon.ico',
-        title: 'Sublime Text',
-        desc:' 是一个文本编辑器，同时也是一个先进的代码编辑器',
-        link: 'https://www.sublimetext.com/'
-      },
-      {
-        badge:'开源',
-        icon: 'https://code.visualstudio.com/favicon.ico',
-        title: 'Visual Studio Code',
-        desc: '微软公司开发的跨平台开源代码编辑器',
-        link: 'https://code.visualstudio.com/'
-      },
-      {
-        badge: '开发者免费',
-        icon: 'https://www.jetbrains.com/favicon.ico',
-        title: 'JetBrains IDE',
-        desc: 'JetBrains 公司开发的一系列集成开发环境',
-        link: 'https://www.jetbrains.com/ides/#choose-your-ide'
       },
     ]
   },
