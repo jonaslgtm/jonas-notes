@@ -21,7 +21,6 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/fe'
   },
-  // { text: '源码阅读', link: '/analysis/react/18', activeMatch: '^/analysis' },
   {
     text: 'Workflow',
     items: [
@@ -58,7 +57,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         //   text: '终端相关',
         items: [
-          { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
+          // { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
           { text: '命令行工具', link: '/workflow/terminal/toolkit' }
           // { text: 'Shell 命令', link: '/workflow/terminal/shell' },
         ]
@@ -101,7 +100,6 @@ export const nav: DefaultTheme.Config['nav'] = [
         ]
       },
       { text: '在线工具', link: '/efficiency/online-tools' },
-      { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
     ],
     activeMatch: '^/efficiency'
   },

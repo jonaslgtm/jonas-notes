@@ -59,10 +59,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '前端页面渲染方式', link: '/fe/concept/page-rendering' }
       ]
     },
-    {
-      text: '编程题',
-      link: '/fe/coding/'
-    }
   ],
   // '/analysis/': [
   //   {
@@ -114,27 +110,32 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Sass 常用技巧', link: '/workflow/sass/' }
       ]
     },
-    {
-      text: 'Vue 相关',
-      link: '/workflow/vue/'
-    },
+    // {
+    //   text: 'Vue 相关',
+    //   link: '/workflow/vue/'
+    // },
     {
       text: 'Node 相关',
       // collapsed: false,
       items: [{ text: 'npm 常用命令', link: '/workflow/node/npm' }]
     },
     {
-      text: '终端相关',
-      collapsed: false,
+      text: '前端框架相关',
+      //collapsed: false,
       items: [
-        { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
+        { text: 'Vue ', link: '/workflow/vue/' },
+      ]
+    },
+    {
+      text: '终端相关',
+      //collapsed: false,
+      items: [
         { text: '命令行工具', link: '/workflow/terminal/toolkit' },
-        { text: 'Shell 命令', link: '/workflow/terminal/shell' }
       ]
     },
     {
       text: 'Git 相关',
-      collapsed: false,
+      //collapsed: false,
       items: [
         { text: 'Git 相关技巧', link: '/workflow/git/' },
         { text: 'Git 命令清单', link: '/workflow/git/command' }
@@ -155,7 +156,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     },
     { text: '在线工具', link: '/efficiency/online-tools' },
-    { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
   ],
   // '/pit/': [
   //   {

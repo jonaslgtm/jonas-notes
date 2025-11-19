@@ -25,10 +25,10 @@ export const NAV_DATA: NavData[] = [
         link: 'https://chat.deepseek.com/'
       },
       {
-        icon: 'https://npm.devtool.tech/logo.svg',
-        title: 'npm 库在线执行',
-        desc: '在浏览器控制台中在线运行调试与测试 npm 中的库',
-        link: 'https://npm.devtool.tech'
+        icon: 'https://mp.weixin.qq.com/favicon.ico',
+        title: '微信公众平台',
+        desc: '管理服务号、公众号、小程序',
+        link: 'https://mp.weixin.qq.com/',
       },
       {
         icon: 'https://devtool.tech/logo.svg',
