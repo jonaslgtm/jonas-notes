@@ -15,7 +15,7 @@
   "author": "jonas <10245089@qq.com>",
 
   "scripts": {
-    "dev": "cross-env NODE_ENV=development pnpm run generate-index && vitepress dev docs --port=8732",
+    "dev": "cross-env NODE_ENV=development pnpm run generate-index && vitepress dev docs --port=8731",
     "build": "pnpm run generate-index && vitepress build docs",
     "build:docs": "vitepress build docs",
     "preview": "vitepress preview docs --port 8730",
